@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PerfectCRUD",
+        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-CRUD.git",
+        "state": {
+          "branch": null,
+          "revision": "bb78fc6a2119c1dcf485a967e547098a61b6728c",
+          "version": "1.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
