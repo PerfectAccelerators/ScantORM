@@ -138,4 +138,3 @@ public struct DatabaseManager<D: DatabaseConfigurationProtocol> {
         return type
     }
 }
-

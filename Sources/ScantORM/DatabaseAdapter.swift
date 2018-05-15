@@ -1,4 +1,5 @@
 import PerfectCRUD
+import ApplicationConfiguration
 
 public protocol DatabaseAdapterProtocol {
     var dbConfig: DBConfiguration { get }
@@ -45,4 +46,3 @@ extension DatabaseAdapter {
         // Todo
     }
 }
-
