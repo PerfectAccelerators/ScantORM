@@ -1,5 +1,5 @@
 
-struct DBConfiguration: Codable {
+public struct DBConfiguration: Codable {
     let name: String?
     let host: String?
     let port: Int?
@@ -8,7 +8,7 @@ struct DBConfiguration: Codable {
     let driverType: DBDriverType
 }
 
-enum DBDriverType: Int, Codable {
+public enum DBDriverType: Int, Codable {
     case MySQL = 1
     case PostgreSQL = 2
 }
