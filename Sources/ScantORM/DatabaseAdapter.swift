@@ -1,20 +1,20 @@
 import PerfectCRUD
 
-protocol DatabaseAdapterProtocol {
+public protocol DatabaseAdapterProtocol {
     var dbConfig: DBConfiguration { get }
     init(config: DBConfiguration)
 }
 
-protocol DatabaseConnectionProtocol {
+public protocol DatabaseConnectionProtocol {
     associatedtype DBConfigurationProtocol: DatabaseConfigurationProtocol
     func connect() -> Database<DBConfigurationProtocol>?
     func disconnect()
 }
 
-struct DatabaseAdapter<DBC: DatabaseConfigurationProtocol>: DatabaseAdapterProtocol {
-    var dbConfig: DBConfiguration
+public struct DatabaseAdapter<DBC: DatabaseConfigurationProtocol>: DatabaseAdapterProtocol {
+    public var dbConfig: DBConfiguration
     
-    init(config: DBConfiguration) {
+    public init(config: DBConfiguration) {
         dbConfig = DBConfiguration(name: config.name,
                                    host: config.host,
                                    port: config.port,
@@ -25,7 +25,7 @@ struct DatabaseAdapter<DBC: DatabaseConfigurationProtocol>: DatabaseAdapterProto
 }
 
 extension DatabaseAdapter {
-    func connect() -> Database<DBC>? {
+    public func connect() -> Database<DBC>? {
         do {
             let connection = try DBC.init(url: nil,
                                           name: dbConfig.name ?? "perfect",
@@ -41,7 +41,7 @@ extension DatabaseAdapter {
         }
     }
     
-    func disconnect() {
+    public func disconnect() {
         // Todo
     }
 }
