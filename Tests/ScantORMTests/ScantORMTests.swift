@@ -3,12 +3,26 @@ import XCTest
 
 final class ScantORMTests: XCTestCase {
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(ScantORM().text, "Hello, World!")
+        
     }
-
+    /*
+    func testDatabaseConnection() {
+        guard let db = app.database() else {
+            XCTAssert(false)
+            return
+        }
+        
+        let database = DatabaseManager(db: db)
+        do {
+            let people = try database.read(Person.self, where: nil)
+            XCTAssertNotNil(people)
+            print("\(people.first)")
+        } catch {
+            print("error")
+            XCTAssert(false)
+        }
+    }
+ */
 
     static var allTests = [
         ("testExample", testExample),
